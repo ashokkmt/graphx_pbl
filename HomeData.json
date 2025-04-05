@@ -1,0 +1,17 @@
+[
+    {
+        "classname" : "grid-item",
+        "heading" : "Check XSS-Attack",
+        "para" : "Cross-Site Scripting (XSS) is a type of security vulnerability in web applications where attackers inject malicious scripts into webpages viewed by other users. This attack occurs when an application does not properly sanitize user input, allowing malicious JavaScript to execute in a victim’s browser. XSS can be used to steal sensitive data, such as cookies and session tokens, redirect users to malicious sites, or manipulate webpage content.",
+        "para_class_name" : "paraheight",
+        "btndata" : "Get Started"
+    },
+
+    {
+        "classname" : "grid-item",
+        "heading" : "Check Fishing-Attack",
+        "para" : "Phishing attacks are cyber threats where attackers deceive individuals into providing sensitive information, such as passwords, credit card details, or personal data, by posing as legitimate entities. These attacks typically occur through fraudulent emails, messages, or fake websites that mimic trusted organizations. Victims unknowingly enter their credentials, allowing attackers to steal and misuse their information. To prevent phishing, users should verify email sources, avoid clicking on suspicious links, and enable multi-factor authentication for added security.",
+        "para_class_name" : "paraheight",
+        "btndata" : "Get Started"
+    }
+]
