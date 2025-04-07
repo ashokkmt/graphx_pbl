@@ -5,18 +5,34 @@ import { Link, useNavigate } from 'react-router-dom'
 export default function Navebar() {
 
     const [hamb, changehamb] = useState(false);
+    const [popup, changepopup] = useState(false);
     const navigate = useNavigate();
 
     const Show_Nav_Links = () =>{
         changehamb(!hamb);
+
+        setTimeout(() => {            
+            changepopup(!popup);
+        }, 1);
+
     }
 
+    const closeNavbar = ()=>{
+        Show_Nav_Links();
+    }
 
     return (
         <nav className="navbar">
             <div className="logo" onClick={()=> navigate("/")} >Cyber Ai</div>
             <div className="nav-buttons">
-                <ul className={hamb ? "mobile-ham" : "nav-links"}>
+                <ul className={hamb ? `mobile-ham ${popup ? 'Active' : ''}` : "nav-links"}>
+                    <div className={hamb ? "heading-open" : "heading-close"}>
+                        <h2>Cyber Ai</h2>
+                       
+                        <svg onClick={closeNavbar} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#54af6b" fill="none">
+                          <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /> 
+                        </svg>
+                    </div>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/About">About Me</Link></li>
                     <li><Link to="/Projects">Projects</Link></li>
@@ -32,4 +48,3 @@ export default function Navebar() {
         </nav>
     )
 }
-
