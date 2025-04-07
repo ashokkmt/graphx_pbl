@@ -4,6 +4,7 @@ import Home from './components/Home.jsx'
 import { BrowserRouter, Routes, Route } from "react-router";
 import Navebar from './components/Navebar.jsx';
 import Footer from './components/Footer.jsx'
+import ProjectPage from './components/ProjectPage.jsx';
 
 function Homepage() {
   return (
@@ -39,7 +40,7 @@ function Projectpage() {
   return (
     <>
       <Navebar />
-      
+      <ProjectPage/>
       <Footer/>
     </>
   )
