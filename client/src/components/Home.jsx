@@ -3,6 +3,9 @@ import '../styles/Home.css'
 import HomeData from "../../HomeData.json"
 
 export default function Home() {
+  
+
+
   return (
     <>
       <main>
@@ -12,12 +15,12 @@ export default function Home() {
         <div className="grid-container">
 
           {
-            HomeData.map((data)=>{
+            HomeData.map((data, i)=>{
               return (
-                <div className={data.classname}>
+                <div key={i} className={data.classname}>
                   <h2>{data.heading}</h2>
                   <p className={data.para_class_name}>{data.para}</p>
-                  <button >{data.btndata}</button>
+                  <button>{data.btndata}</button>
                 </div>
               )
             })
