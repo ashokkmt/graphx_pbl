@@ -8,11 +8,12 @@ export default function ProjectPage() {
     const saveValue = async (e)=>{
         e.preventDefault();
         setdata(data);
-        const res = await axios.post("http://127.0.0.1:5000/activity", {
+        const res = await axios.post("http://127.0.0.1:5000/api/detect", {
             data : data
         })
-
+        
         console.log(res)
+        // setdata("");
     }
 
   return (
