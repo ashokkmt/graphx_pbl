@@ -16,27 +16,7 @@ function Homepage() {
   )
 }
 
-function Aboutpage() {
-  return (
-    <>
-      <Navebar />
-
-      <Footer/>
-    </>
-  )
-}
-
-function Activitypage() {
-  return (
-    <>
-      <Navebar />
-      
-      <Footer/>
-    </>
-  )
-}
-
-function Projectpage() {
+function TestPage() {
   return (
     <>
       <Navebar />
@@ -51,9 +31,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/About" element={<Aboutpage />} />
-        <Route path="/Projects" element={<Projectpage />} />
-        <Route path="/Activity" element={<Activitypage />} />
+        <Route path="/Projects" element={<TestPage />} />
       </Routes>
     </BrowserRouter>
   )

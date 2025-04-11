@@ -1,28 +1,59 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from "axios"
+import '../styles/Projectpage.css'
 
 export default function ProjectPage() {
 
     const [data, setdata] = useState("")
+    const [out, setout] = useState("")
+    const [headingout, setheadingout] = useState("")
+    const [ImgURL, setImgURL] = useState("/public/images/Secure.png")
+    const [popup, setpopup] = useState(false)
 
-    const saveValue = async (e)=>{
+    const saveValue = async (e) => {
         e.preventDefault();
         setdata(data);
         const res = await axios.post("http://127.0.0.1:5000/api/detect", {
-            data : data
+            data: data
         })
-        
-        console.log(res)
-        // setdata("");
+
+        setpopup(true);
+        setdata("");
+        setout(res.data.result)        
+        // console.log(res.data.result)
+
+        const data2 = res.data.result;
+        if(data2.toLowerCase().includes("no attack found")){
+            setheadingout("Secure")
+            setImgURL("/public/images/Secure.png")
+        }
+        else {
+            setheadingout("Not Secure")
+            setImgURL("/public/images/notSecure.jpeg")
+        }
     }
 
-  return (
-    <div>
-        <form>
-            <input value={data}   onChange={(e) => setdata(e.target.value)}  type="text" />
-            <button onClick={saveValue}>Send</button>
-        </form>
-    </div>
-  )
+    return (
+        <>
+            <div className={popup ? "show-output" : "output-pop"}>
+                <div className="out-card">
+                    <div className="heading-pop">
+                        <h2>{headingout}</h2>
+                        <img src={ ImgURL } alt="Image" />
+                    </div>
+                    <p>{out}</p>
+                </div>
+
+                <img onClick={()=>{setpopup(false)}} className='back-btn' src="/public/images/back.png" alt="back" />
+                    
+            </div>
+            <div className='search-container'>
+                <form className='search-box'>
+                    <input value={data} onChange={(e) => setdata(e.target.value)} type="text" />
+                    <button onClick={saveValue}>Send</button>
+                </form>
+            </div>
+        </>
+    )
 }
 

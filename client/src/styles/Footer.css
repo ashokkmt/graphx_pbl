@@ -24,11 +24,34 @@ footer {
     text-decoration: underline;
   }
   
+
+  .foot-cont{
+    padding: .5rem 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >div{
+      color: #00ff88;
+    }
+  }
+
   @media (max-width: 768px) {
     footer {
         padding: 10px 20px;
     }
     footer p, footer a {
         font-size: 14px;
+    }
+
+    .foot-cont {
+      padding: 0;
+    }
+  }
+
+
+  @media (max-width : 360px){ 
+    .foot-cont {
+      flex-direction: column;
     }
   }
