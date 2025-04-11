@@ -33,7 +33,8 @@ def detect():
         return jsonify({
             "layer": 1,
             "result": "⚠️ Attack Detected (Layer 1 - Pattern)",
-            "match": matched
+            "match": matched,
+            "flag": True
         })
 
     # ------- Layer 2: FSM - XSS Script Tag -------
@@ -41,7 +42,9 @@ def detect():
         print("found in layer 2 script tag")
         return jsonify({
             "layer": 2,
-            "result": "⚠️ XSS <script> tag detected by FSM"
+            "result": "⚠️ XSS <script> tag detected by FSM",
+            "match": "Suspicious <script> tag found",
+            "flag": True
         })
 
     # ------- Layer 2: FSM - XSS Patterns -------
@@ -50,7 +53,9 @@ def detect():
         print("found in layer 2 xss pattern")
         return jsonify({
             "layer": 2,
-            "result": f"⚠️ XSS pattern '{xss_match}' detected by FSM"
+            "result": f"⚠️ XSS pattern '{xss_match}' detected by FSM",
+            "match":xss_match,
+            "flag": True
         })
 
     # ------- Layer 2: FSM - SQL Grammar -------
@@ -58,13 +63,17 @@ def detect():
         print("found in layer 2 sql validation")
         return jsonify({
             "layer": 2,
-            "result": "⚠️ SQL query structure invalid (FSM failed)"
+            "result": "⚠️ SQL query structure invalid (FSM failed)",
+            "match": "SQL structure violation",
+            "flag": True
         })
 
     # If all layers passed
     return jsonify({
         "layer": 2,
-        "result": "✅ Input passed Layer 1 and Layer 2 (no attack found)"
+        "result": "✅ Input passed Layer 1 and Layer 2 (no attack found)",
+        "match": "Nothing suspicious found",
+        "flag": False
     })
 
 
