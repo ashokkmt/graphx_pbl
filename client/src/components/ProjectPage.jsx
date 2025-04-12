@@ -20,10 +20,19 @@ export default function ProjectPage() {
         setpopup(true);
         setdata("");
         setout(res.data.result)        
-        // console.log(res.data.result)
+        // console.log(res)
 
-        const data2 = res.data.result;
-        if(data2.toLowerCase().includes("no attack found")){
+        // const data2 = res.data.result;
+        // if(data2.toLowerCase().includes("no attack found")){
+        //     setheadingout("Secure")
+        //     setImgURL("/public/images/Secure.png")
+        // }
+        // else {
+        //     setheadingout("Not Secure")
+        //     setImgURL("/public/images/notSecure.jpeg")
+        // }
+
+        if(res.data.flag == false){
             setheadingout("Secure")
             setImgURL("/public/images/Secure.png")
         }

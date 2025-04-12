@@ -32,7 +32,7 @@ def detect():
         print("found in layer 1")
         return jsonify({
             "layer": 1,
-            "result": "⚠️ Attack Detected (Layer 1 - Pattern)",
+            "result": f"⚠️'{matched}' Attack Detected (Layer 1 - Pattern)",
             "match": matched,
             "flag": True
         })
