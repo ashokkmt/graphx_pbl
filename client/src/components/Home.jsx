@@ -21,18 +21,20 @@ export default function Home() {
 
         <div className="about-Attack">
 
-          <h1>Attacks</h1>
+          <h1>🔐 Common Web Vulnerabilities</h1>
           <div className="context-attack">
             <div className="attack-1">
-              <h1>XSS-Attack</h1>
-              <p>Cross-Site Scripting (XSS) is a type of security vulnerability commonly found in web applications. It allows attackers to inject malicious scripts into content that is then served to other users. When unsuspecting users load the infected page, the malicious script runs in their browser, potentially stealing sensitive information like cookies, session tokens, or login credentials. XSS attacks exploit the trust a user has in a website and can lead to account hijacking, data theft, or defacement of websites. Proper input validation and output encoding are key to preventing XSS vulnerabilities.</p>
+              <h1>XSS (Cross-Site Scripting) Attack</h1>
+              <p>Cross-Site Scripting (XSS) is a vulnerability found in web applications where attackers inject malicious scripts into trusted websites. When unsuspecting users visit the infected page, the script runs in their browser — potentially exposing sensitive data such as cookies, session tokens, or login details.
+                XSS targets the user's trust in a website, leading to data theft, session hijacking, or defacement.</p>
             </div>
 
             <div className='diffline'></div>
 
             <div className="attack-2">
-              <h1>Shell Scripting Attack</h1>
-              <p>Shell scripting attacks involve the exploitation of command-line interpreters like Bash to execute unauthorized or malicious shell commands on a system. These attacks often occur through poorly sanitized inputs in web applications or scripts that pass user input directly into a shell. An attacker may inject commands to gain unauthorized access, manipulate files, exfiltrate data, or even take control of the system. A common example is Command Injection, where attackers exploit vulnerabilities in scripts to execute arbitrary commands.</p>
+              <h1>SQL Injection (SQLi) Attack</h1>
+              <p>SQL Injection is a critical vulnerability that occurs when an attacker inserts malicious SQL queries into user input fields — such as login forms or search bars. If the input is not properly sanitized, it can directly interact with the database.
+                This can allow attackers to bypass authentication, read sensitive data, delete records, or even take full control of the database.</p>
             </div>
           </div>
 
@@ -40,23 +42,19 @@ export default function Home() {
 
         <div className='prevent-box'>
           <div className='prevent-content'>
-            <h1>How We Prevent Attack's</h1>
-            <ul>
+            <h1>How We Secure Your Inputs?</h1>
+            <ul class="protection-list">
               <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, blanditiis?
-
+                <strong>Layer 1: Trie-Based Detection</strong><br />
+                Scans input for known attack signatures like SQLi or XSS using pattern matching. Fast and lightweight.
               </li>
               <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, blanditiis?
-
+                <strong>Layer 2: Grammar-Based FSM Validation</strong><br />
+                Validates SQL and JavaScript input structure using Finite State Machines to detect malformed or suspicious logic.
               </li>
               <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, blanditiis?
-
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, blanditiis?
-
+                <strong>Layer 3: ML Heuristic Classifier</strong><br />
+                Uses machine learning with features like entropy, token frequency, and structure to detect complex or obfuscated attacks.
               </li>
             </ul>
           </div>
@@ -65,32 +63,27 @@ export default function Home() {
 
         <div className="user-card">
 
-          <h1>Contributer's</h1>
-    
-          <div className="card-box">
-
-
-            {/* Add Kr lena isme Dynamiclly contributers ke naaam ok  */}
-            {
-              HomeData.map((data, i) => {
-                return (
-                  <div className="card">
-                    <img src={data.imgURL} alt="img_load" />
-                    <div className="data-box">
-                      <div className='abt-box'>Name : {data.Name}</div>
-                      <div className='abt-box'>Roll Number : {data.Roll_Number}</div>
-                      <div className='abt-box'>University : {data.University}</div>
-                      <div className='abt-box'>Section : {data.Section}</div>
+          <div className="user-content">
+            <h1>Contributer's</h1>
+            <div className="card-box">
+              {
+                HomeData.map((data, i) => {
+                  return (
+                    <div className="card">
+                      <img src={data.imgURL} alt="img_load" />
+                      <div className="data-box">
+                        <div className='abt-box'>{data.Name}</div>
+                        {/* <div className='abt-box'>{data.Roll_Number}</div> */}
+                        <div className='abt-box'>{data.University}</div>
+                        <div className='abt-box'>Section: {data.Section}</div>
+                      </div>
                     </div>
-                  </div>
-                )
-              })
-            }
-
+                  )
+                })
+              }
+            </div>
           </div>
-
         </div>
-
       </main>
     </>
   )
