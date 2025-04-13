@@ -34,9 +34,7 @@ export default function Navebar() {
                         </svg>
                     </div>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/About">About Me</Link></li>
-                    <li><Link to="/Projects">Projects</Link></li>
-                    <li><Link to="/Activity">Activity</Link></li>
+                    <li><Link to="/Projects">Test</Link></li>
                 </ul>
                 
                 <svg onClick={Show_Nav_Links} className='hamburger' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#54af6b" fill="none">

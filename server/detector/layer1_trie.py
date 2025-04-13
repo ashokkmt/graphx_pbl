@@ -15,7 +15,7 @@ class Trie:
             node = node.children.setdefault(char, TrieNode())
         node.end_of_word = True
 
-    def search(self, text: str) -> (bool, str | None):
+    def search(self, text: str) -> (bool, str | None): # type: ignore
         text = text.lower()
         for i in range(len(text)):
             node = self.root
