@@ -64,7 +64,7 @@ export default function Home() {
         <div className="user-card">
 
           <div className="user-content">
-            <h1>Contributer's</h1>
+            <h1>Meet the Contributors</h1>
             <div className="card-box">
               {
                 HomeData.map((data, i) => {
