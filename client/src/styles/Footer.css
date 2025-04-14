@@ -1,8 +1,7 @@
 footer {
-    /* background-color: #004d40; */
     background: #090909;
     color: white;
-    min-height: 15vh;
+    min-height: 11vh;
     padding: 10px 40px;
     text-align: center;
     display: flex;
@@ -38,6 +37,12 @@ footer {
     }
   }
 
+  @media (max-width: 1024px){
+    .foot-cont{
+      padding: .5rem 7rem;
+    }
+  }
+
   @media (max-width: 768px) {
     footer {
         padding: 10px 20px;
@@ -47,7 +52,13 @@ footer {
     }
 
     .foot-cont {
-      padding: 0;
+      padding: .5rem 4rem;
+    }
+  }
+
+  @media (max-width:600px){
+    .foot-cont{
+      padding: 0 .5rem;
     }
   }
 
@@ -57,3 +68,5 @@ footer {
       flex-direction: column;
     }
   }
+
+  
