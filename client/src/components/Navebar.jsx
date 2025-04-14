@@ -20,6 +20,16 @@ export default function Navebar() {
         Show_Nav_Links();
     }
 
+
+    useEffect(() => {
+        if (hamb) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [hamb]);
+    
+
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 30);

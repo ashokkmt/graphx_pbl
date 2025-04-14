@@ -28,8 +28,8 @@ body {
 
 
 .home-conatiner img {
-  width: 30%;
-  height: 70%;
+  width: 35vh;
+  height: 27vh;
   object-fit: contain;
   animation: bouncing infinite ease-in-out 1.5s alternate;
 }
@@ -72,6 +72,7 @@ body {
 }
 
 .about-Attack>h1 {
+  text-align: center;
   font-size: xxx-large;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
@@ -79,7 +80,7 @@ body {
 }
 
 .context-attack {
-  display: flex;
+  /* display: flex; */
   align-items: stretch;
   justify-content: center;
   display: grid;
@@ -90,16 +91,6 @@ body {
 .diffline {
   width: 1.5px;
   background-color: gray;
-}
-
-@media (max-width: 768px) {
-  .context-attack {
-    flex-direction: column;
-  }
-
-  .diffline {
-    display: none;
-  }
 }
 
 .attack-1,
@@ -148,7 +139,9 @@ body {
   align-items: center;
 }
 
+
 .prevent-content h1 {
+  text-align: center;
   font-size: xxx-large;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
@@ -191,7 +184,7 @@ body {
 
 .user-card {
   background: #171717;
-  padding: 9rem 16rem;
+  padding: 9rem 0rem;
 }
 
 .user-card h1 {
@@ -215,6 +208,7 @@ body {
 }
 
 .card-box {
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -231,7 +225,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3em 2em;
+  padding: 1em 1em;
 }
 
 
@@ -252,8 +246,8 @@ body {
 
 
 .card img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   margin-top: 20px;
   object-fit: cover;
@@ -263,4 +257,217 @@ body {
 
 .abt-box {
   text-wrap: nowrap;
+}
+
+
+@media (max-width: 1440px) {
+  .home-conatiner{
+    padding: 0 10rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .home-conatiner {
+      padding: 0 5rem;
+  }
+}
+
+@media (max-width: 1125px) {
+  .about-Attack > h1{
+    font-size: 2.5rem;
+  }
+
+  .attack-1 > h1 , .attack-2 > h1{
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .title h1 {
+    font-size: 2.5rem;
+  }
+
+  .title p{
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .about-Attack{
+    padding: 9rem 6rem;
+  }
+
+  .prevent-box{
+    padding: 9em 0em;
+  }
+} 
+
+@media (max-width: 900px) {
+  .title h1 {
+    font-size: 2.2rem;
+  }
+
+  .title p{
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width: 815px) {
+    .about-Attack h1{
+      font-size: 2.2rem;
+    }
+
+    .attack-1 > h1, .attack-2 > h1 {
+      font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 1.6rem;
+  }
+
+  .prevent-content h1{
+    font-size: 36px;
+  }
+
+  .title p{
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .home-conatiner img{
+    width: 25vh;
+    height: auto;
+  }
+
+  .about-Attack h1 {
+    font-size: 2rem;
+  }
+
+  .attack-1 > h1, .attack-2 > h1 {
+    font-size: 20px;
+  }
+
+  .attack-1 > p, .attack-2 > p {
+    font-size: medium;
+  }
+}
+
+
+
+
+
+@media (max-width: 660px) {
+  .home-conatiner {
+      padding: 0 3rem;
+  }
+  
+  .user-content h1{
+    font-size: 36px;
+  }
+
+  .user-card{
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-Attack {
+    padding: 6rem 4rem;
+  } 
+  .about-Attack h1 {
+    font-size: 1.8rem;
+  }
+
+  .attack-1 > h1, .attack-2 > h1 {
+    font-size: 18px;
+  }
+
+  .attack-1 > p, .attack-2 > p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width:584px){
+  .about-Attack {
+    padding: 4rem 1rem;
+  }
+
+  .prevent-content h1{
+    font-size: 30px;
+  }
+
+  .context-attack{
+    display: block;
+  }
+
+  .attack-1{
+    padding: 0 0 2.5rem 0;
+  }
+
+  .diffline{
+    display: none;
+  }
+}
+
+@media (max-width: 515px) {
+  .about-Attack{
+    padding: 3rem 1rem;
+  }
+
+  .home-conatiner{
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .home-conatiner img{
+    width: 20vh;
+    height: auto;
+  }
+
+  
+}
+
+
+@media (max-width: 475px) {
+  .home-conatiner {
+      padding: 0 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .title h1 {
+    font-size: 1.4rem;
+  }
+
+  .title p{
+    font-size: .7rem;
+  } 
+
+  .home-conatiner img {
+    width: 20vh;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .home-conatiner {
+      padding: 0 .2rem;
+  }
+  .title h1 {
+    font-size: 1rem;
+  }
+
+  .title p{
+    font-size: .6rem;
+  } 
+
+  .home-conatiner img{
+    width: 15vh;
+    height: auto;
+  }
 }
