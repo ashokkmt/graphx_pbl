@@ -7,38 +7,34 @@ export default function ProjectPage() {
     const [data, setdata] = useState("")
     const [out, setout] = useState("")
     const [headingout, setheadingout] = useState("")
-    const [ImgURL, setImgURL] = useState("/public/images/Secure.png")
+    const [ImgURL, setImgURL] = useState("/Images/Secure.png")
     const [popup, setpopup] = useState(false)
 
     const saveValue = async (e) => {
         e.preventDefault();
         setdata(data);
-        const res = await axios.post("http://127.0.0.1:5000/api/detect", {
+
+        // For local testing
+        // const res = await axios.post("http://127.0.0.1:5000/api/detect", {
+        //     data: data
+        // })
+
+        // For production
+        const res = await axios.post("https://cyberthreatbackend.onrender.com//api/detect", {
             data: data
         })
 
         setpopup(true);
         setdata("");
         setout(res.data.result)        
-        // console.log(res)
-
-        // const data2 = res.data.result;
-        // if(data2.toLowerCase().includes("no attack found")){
-        //     setheadingout("Secure")
-        //     setImgURL("/public/images/Secure.png")
-        // }
-        // else {
-        //     setheadingout("Not Secure")
-        //     setImgURL("/public/images/notSecure.jpeg")
-        // }
-
+        
         if(res.data.flag == false){
             setheadingout("Secure")
-            setImgURL("/public/images/Secure.png")
+            setImgURL("/Images/Secure.png")
         }
         else {
             setheadingout("Not Secure")
-            setImgURL("/public/images/notSecure.jpeg")
+            setImgURL("/Images/notSecure.jpeg")
         }
     }
 
@@ -53,7 +49,7 @@ export default function ProjectPage() {
                     <p>{out}</p>
                 </div>
 
-                <img onClick={()=>{setpopup(false)}} className='back-btn' src="/public/images/back.png" alt="back" />
+                <img onClick={()=>{setpopup(false)}} className='back-btn' src="/Images/back.png" alt="back" />
                     
             </div>
             <div className='search-container'>

@@ -15,7 +15,7 @@ export default function Home() {
               <h1>Cross Site Scripting-Attack</h1>
               <p className='main-p'>Identify Attack By <span className='movementtext'> Cyber Ai</span></p>
             </div>
-            <img src="/public/images/homeImg.png" alt="Loading.." />
+            <img src="/Images/homeImg.png" alt="Loading.." />
           </div>
         </div>
 
