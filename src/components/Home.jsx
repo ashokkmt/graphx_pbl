@@ -13,7 +13,7 @@ export default function Home() {
           <div className="home-conatiner">
             <div className="title">
               <h1>Cross Site Scripting-Attack</h1>
-              <p className='main-p'>Identify Attack By <span className='movementtext'> Cyber Ai</span></p>
+              <p className='main-p'>Identify Attack By <span className='movementtext'> Graph X</span></p>
             </div>
             <img src="/Images/homeImg.png" alt="Loading.." />
           </div>
@@ -45,16 +45,16 @@ export default function Home() {
             <h1>How We Secure Your Inputs?</h1>
             <ul class="protection-list">
               <li>
-                <strong>Layer 1: Trie-Based Detection</strong><br />
-                Scans input for known attack signatures like SQLi or XSS using pattern matching. Fast and lightweight.
+                <strong>Layer 1: Trie-Based Detection (Graph Optimization)</strong><br />
+                Performs pattern matching in O(m) time using Trie data structure. Efficient compared to brute-force O(nm) search for known attack payloads.
               </li>
               <li>
-                <strong>Layer 2: Grammar-Based FSM Validation</strong><br />
-                Validates SQL and JavaScript input structure using Finite State Machines to detect malformed or suspicious logic.
+                <strong>Layer 2: FSM Grammar Validation (Automata Theory)</strong><br />
+                Applies Finite State Machine traversal (DFA/NFA) for syntax validation in O(n) time. Ensures structural correctness of SQL/JS inputs.
               </li>
               <li>
-                <strong>Layer 3: ML Heuristic Classifier</strong><br />
-                Uses machine learning with features like entropy, token frequency, and structure to detect complex or obfuscated attacks.
+                <strong>Layer 3: ML-Based Anomaly Classification (Heuristic Detection)</strong><br />
+                Implements classification algorithms like Decision Trees (O(n log n)) for training and O(1) for prediction. Uses heuristic features to detect anomalies.
               </li>
             </ul>
           </div>

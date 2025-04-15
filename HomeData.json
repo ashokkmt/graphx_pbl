@@ -1,6 +1,13 @@
 [
     {
         "imgURL" : "/Images/NoNeed/6538623.jpg",
+        "Name" : "Ashok Kumawat",
+        "Roll_Number" : "3532523",
+        "University" : "Graphic Era Hill University",
+        "Section" : "I2"
+    },
+    {
+        "imgURL" : "/Images/NoNeed/6538623.jpg",
         "Name" : "Himanshu Bisht",
         "Roll_Number" : "2318862",
         "University" : "Graphic Era Hill University",
@@ -13,20 +20,5 @@
         "Roll_Number" : "3532523",
         "University" : "Graphic Era Hill University",
         "Section" : "I2"
-    },
-    {
-        "imgURL" : "/Images/NoNeed/6538623.jpg",
-        "Name" : "Ashok Kumawat",
-        "Roll_Number" : "3532523",
-        "University" : "Graphic Era Hill University",
-        "Section" : "I2"
-    },
-    {
-        "imgURL" : "/Images/NoNeed/6538623.jpg",
-        "Name" : "Ashok Kumawat",
-        "Roll_Number" : "3532523",
-        "University" : "Graphic Era Hill University",
-        "Section" : "I2"
     }
-   
 ]
