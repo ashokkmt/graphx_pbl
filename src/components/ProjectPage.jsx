@@ -7,7 +7,7 @@ export default function ProjectPage() {
     const [data, setdata] = useState("")
     const [out, setout] = useState("")
     const [headingout, setheadingout] = useState("")
-    const [ImgURL, setImgURL] = useState("/public/Images/secure.png")
+    const [ImgURL, setImgURL] = useState("/Images/secure.png")
     const [popup, setpopup] = useState(false)
 
     const saveValue = async (e) => {
@@ -30,11 +30,11 @@ export default function ProjectPage() {
         
         if(res.data.flag == false){
             setheadingout("Secure")
-            setImgURL("/public/Images/secure.png")
+            setImgURL("/Images/secure.png")
         }
         else {
             setheadingout("Not Secure")
-            setImgURL("/public/Images/notSecure.jpeg")
+            setImgURL("/Images/notSecure.jpeg")
         }
     }
 
