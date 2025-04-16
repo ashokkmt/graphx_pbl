@@ -20,7 +20,7 @@ export default function ProjectPage() {
         // })
 
         // For production
-        const res = await axios.post("https://cyberthreatbackend.onrender.com//api/detect", {
+        const res = await axios.post("https://cyberthreatbackend.onrender.com/api/detect", {
             data: data
         })
 
