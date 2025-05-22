@@ -1,0 +1,72 @@
+.project-boxes {
+  min-height: 80vh;
+  background: #0a0a0a; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boxes {
+  width: 60%;
+  max-width: 700px;
+  background: #1c1c1c; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 3rem;
+  gap: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px -4px #3c8dffaa;
+  flex-wrap: wrap;
+  transition: background-color 0.3s ease;
+}
+
+
+.srch-btn,
+.cmnt-btn,
+.form-btn {
+  width: 22vh;
+  min-width: 150px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  box-shadow: 0 5px 15px rgba(56, 249, 214, 0.212);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.srch-btn:hover,
+.cmnt-btn:hover,
+.form-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(56, 249, 214, 0.411);
+}
+
+.srch-btn:active,
+.cmnt-btn:active,
+.form-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 10px rgba(56, 249, 215, 0.7);
+}
+
+@media (max-width: 600px) {
+  .boxes {
+    flex-direction: column;
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+  .srch-btn,
+  .cmnt-btn,
+  .form-btn {
+    width: 100%;
+    max-width: 350px;
+  }
+}

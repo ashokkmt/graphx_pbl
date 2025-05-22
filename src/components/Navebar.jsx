@@ -41,7 +41,7 @@ export default function Navebar() {
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-            <div className="logo" onClick={() => navigate("/")}>Graph X</div>
+            <div className="logo" onClick={() => navigate("/")}>Cyber Ai</div>
             <div className="nav-buttons">
                 <ul className={hamb ? `mobile-ham ${popup ? 'Active' : ''}` : "nav-links"}>
                     <div className={hamb ? "heading-open" : "heading-close"}>
